@@ -2,7 +2,7 @@ require 'sinatra'
 require 'colorize'
 
 BALANCES = {
-  'haseeb' => 100_000,
+  'edward' => 1_000_000,
 }
 
 def print_state
@@ -11,9 +11,9 @@ end
 
 # @param user
 get "/balance" do
-  username = params['user'].downcase
+  user = params['user'].downcase
   print_state
-  "#{username} has #{BALANCES[username]}"
+  "#{user} has #{BALANCES[user]}"
 end
 
 # @param name
